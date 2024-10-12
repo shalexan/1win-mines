@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>📈 HUN$GO MINES BOT</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+</head>
+<body>
+    <h1>📈 HUN$GO MINES BOT</h1>
+
+    <!-- Обертка для сетки, чтобы поднять ее вверх -->
+    <div class="grid-container">
+        <div class="grid">
+            <!-- Ячейки будут генерироваться с помощью JS -->
+        </div>
+    </div>
+
+    <!-- Блок с кнопкой и вводом количества ячеек -->
+    <div class="controls">
+        <input type="text" id="num-cells" value="5 💣" readonly> <!-- Оставлена иконка бомбы на главном экране -->
+        <button id="highlight-btn">Get a signal 🚀</button>
+    </div>
+
+    <form action="https://1wdgh.com">
+        <div class="controls">
+            <button id="main-btn">Go to 1Win</button>
+        </div>
+    </form>
+
+    <!-- Модальное окно для выбора количества ячеек -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Select the number of bombs</h2> <!-- Уменьшенный заголовок -->
+            <div class="button-grid">
+                <!-- Кнопки с номерами для выбора от 1 до 24 -->
+               <button class="num-button" data-value="1">1</button>
+               <button class="num-button" data-value="3">3</button>
+               <button class="num-button" data-value="5">5</button>
+               <button class="num-button" data-value="7">7</button>
+               <script>
+               //    for (let i = 1; i <= 24; i++) {
+               //        document.write(`<button class="num-button" data-value="${i}">${i}</button>`);
+               //    }
+               //</script>
+            </div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+
+    
+    <!-- Модальное окно для ввода серверного сида -->
+ 
+    </body>
+    
+</html>

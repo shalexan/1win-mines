@@ -1,0 +1,278 @@
+/* styles.css */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #2c2c2c; /* Темно-серый фон */
+    color: #ffffff; /* Белый текст */
+    text-align: center;
+    padding: 20px;
+    margin: 0;
+    overflow-x: hidden;
+}
+
+h1 {
+    margin-bottom: 50px;
+    color: #ffffff;
+    font-size: 24px;
+}
+
+.grid-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(5, 60px);
+    grid-gap: 8px;
+    padding: 20px;
+    border: 3px solid #000000;
+    border-radius: 15px;
+    background-color: #3c3c3c;
+}
+
+.cell {
+    width: 60px;
+    height: 60px;
+    background-color: #f0f0f0;
+    border: 2px solid #000000;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.cell:hover {
+    transform: scale(1.1);
+}
+
+.cell.active {
+    background-color: #00a2ff;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%; /* Иконка во всю ячейку */
+    border-color: #000000;
+}
+
+.controls {
+    margin-top: 20px;
+}
+
+#highlight-btn {
+    background-color: #00a2ff;
+    border: none;
+    color: white;
+    padding: 15px 30px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    margin-left: 10px;
+    &:active, &:focus{
+        outline: none;
+      }
+      &:disabled{
+        background-color: #004f7d;
+      }
+}
+
+#highlight-btn:hover {
+    background-color: #0069a6;
+}
+
+#main-btn {
+    background-color: #006ba8;
+    border: none;
+    color: white;
+    padding: 15px 60px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    margin-left: 10px;
+}
+
+#main-btn:hover {
+    background-color: #004f7d;
+}
+
+
+input[type="text"] {
+    padding: 10px;
+    border: 2px solid #00a2ff;
+    border-radius: 5px;
+    text-align: center;
+    width: 80px;
+    background-color: #3c3c3c;
+    color: white;
+    cursor: pointer;
+}
+
+/* Стили для модального окна */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.modal-content {
+    background-color: #2c2c2c;
+    margin: 10% auto;
+    padding: 20px;
+    border: 3px solid #00a2ff; /* Оранжевый контур */
+    border-radius: 10px;
+    width: 85%;
+    max-width: 350px;
+    box-sizing: border-box;
+}
+
+.close {
+    color: #ffffff;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #ff8c00;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+h2 {
+    color: #ffffff;
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+/* Сетка кнопок внутри модального окна */
+.button-grid {
+    display: flex;
+    flex-direction: column;
+    max-height: 500px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding-right: 10px;
+    margin-bottom: 20px;
+}
+
+.button-grid::-webkit-scrollbar {
+    width: 8px;
+}
+
+.button-grid::-webkit-scrollbar-thumb {
+    background-color: #000000;
+    border-radius: 5px;
+}
+
+.num-button {
+    background-color: #00a3ff;
+    color: white;
+    border: none;
+    padding: 15px;
+    font-size: 24px;
+    font-weight: bolder; /* Более жирный текст */
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    margin-bottom: 10px;
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px; /* Расстояние между цифрой и иконкой */
+}
+
+/* Добавляем иконку бомбы после цифры на кнопке */
+.num-button::after {
+    content: '💣';
+    font-size: 24px;
+}
+
+.num-button:hover {
+    background-color: #0069a6; /* Более темный зеленый при наведении */
+}
+
+/* Адаптивность для мобильных устройств */
+@media (max-width: 600px) {
+    .modal-content {
+        padding: 10px;
+    }
+    
+    .num-button {
+        padding: 12px;
+        font-size: 22px;
+    }
+}
+/* Стили для модального окна ввода серверного сида */
+.seed-input {
+    padding: 10px;
+    border: 2px solid #00a2ff;
+    border-radius: 5px;
+    text-align: center;
+    width: 80%;
+    margin-bottom: 20px;
+    background-color: #3c3c3c;
+    color: white;
+    cursor: text;
+}
+
+/* Стили для изображения в модальном окне */
+.seed-info-image {
+    width: 100%;
+    margin-bottom: 20px;
+    border-radius: 5px;
+}
+
+/* Увеличенная ширина строки ввода */
+.seed-input {
+    width: 90%; /* Увеличенная ширина */
+}
+
+/* Уменьшенная кнопка сабмит */
+#submit-seed-btn {
+    padding: 10px 20px; /* Уменьшенные отступы */
+}
+
+/* Скрытый элемент загрузки */
+.loading-message {
+    display: none;
+    margin-top: 10px;
+    color: #ffffff;
+}
+
+/* Add border to the seed information image */
+.seed-info-image {
+    max-width: 100%;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    border: 2px solid #00a2ff; /* Оранжевая обводка вокруг изображения */
+}
+
+/* Make the submit button smaller for mobile devices */
+@media (max-width: 600px) {
+    #submit-seed-btn {
+        padding: 8px 15px; /* Уменьшенные отступы на мобильных устройствах */
+        font-size: 16px; /* Уменьшенный размер шрифта */
+        margin-top: 10px;
+    }
+}
+
+/* Make the submit button narrower and centered */
+#submit-seed-btn {
+    width: auto; /* Set to auto for better width control */
+    margin: 0 auto; /* Center the button horizontally */
+    display: block;
+}
+
+/* Change the border color of the modal to green */
+.modal-content {
+    border: 2px solid #00a3ff; /* Зеленый контур вокруг модального окна */
+}
