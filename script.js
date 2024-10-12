@@ -1,6 +1,5 @@
-// script.js
 
-// Создаем сетку с ячейками
+window.Telegram.WebApp.expand();
 const grid = document.querySelector('.grid');
 for (let i = 0; i < 25; i++) {
     const cell = document.createElement('div');
