@@ -47,10 +47,8 @@ h1 {
     transform: scale(1.1);
 }
 
-
-
 .cell.active {
-    background-color: #4CAF50;
+    background-color: #00a2ff;
     background-repeat: no-repeat;
     background-position: center;
     background-size: 100%; /* Иконка во всю ячейку */
@@ -58,11 +56,11 @@ h1 {
 }
 
 .controls {
-    margin-top: 20px;
+    margin-top: 30px;
 }
 
 #highlight-btn {
-    background-color: #4CAF50;
+    background-color: #00a2ff;
     border: none;
     color: white;
     padding: 15px 30px;
@@ -75,16 +73,16 @@ h1 {
         outline: none;
       }
       &:disabled{
-        background-color: #004402;
+        background-color: #004f7d;
       }
 }
 
 #highlight-btn:hover {
-    background-color: #008204;
+    background-color: #0069a6;
 }
 
 #main-btn {
-    background-color: #008204;
+    background-color: #006ba8;
     border: none;
     color: white;
     padding: 15px 60px;
@@ -96,13 +94,13 @@ h1 {
 }
 
 #main-btn:hover {
-    background-color: #004402;
+    background-color: #004f7d;
 }
 
 
 input[type="text"] {
     padding: 10px;
-    border: 2px solid #4CAF50;
+    border: 2px solid #00a2ff;
     border-radius: 5px;
     text-align: center;
     width: 80px;
@@ -128,7 +126,7 @@ input[type="text"] {
     background-color: #2c2c2c;
     margin: 10% auto;
     padding: 20px;
-    border: 3px solid #4CAF50; /* Оранжевый контур */
+    border: 3px solid #00a2ff; /* Оранжевый контур */
     border-radius: 10px;
     width: 85%;
     max-width: 350px;
@@ -176,7 +174,7 @@ h2 {
 }
 
 .num-button {
-    background-color: #4CAF50; 
+    background-color: #00a3ff;
     color: white;
     border: none;
     padding: 15px;
@@ -201,7 +199,7 @@ h2 {
 }
 
 .num-button:hover {
-    background-color: #008404;  /* Более темный зеленый при наведении */
+    background-color: #0069a6; /* Более темный зеленый при наведении */
 }
 
 /* Адаптивность для мобильных устройств */
@@ -218,7 +216,7 @@ h2 {
 /* Стили для модального окна ввода серверного сида */
 .seed-input {
     padding: 10px;
-    border: 2px solid #4CAF50; 
+    border: 2px solid #00a2ff;
     border-radius: 5px;
     text-align: center;
     width: 80%;
@@ -257,7 +255,7 @@ h2 {
     max-width: 100%;
     margin-bottom: 20px;
     border-radius: 5px;
-    border: 2px solid #4CAF50;  /* Оранжевая обводка вокруг изображения */
+    border: 2px solid #00a2ff; /* Оранжевая обводка вокруг изображения */
 }
 
 /* Make the submit button smaller for mobile devices */
@@ -278,5 +276,5 @@ h2 {
 
 /* Change the border color of the modal to green */
 .modal-content {
-    border: 2px solid #4CAF50;  /* Зеленый контур вокруг модального окна */
+    border: 2px solid #00a3ff; /* Зеленый контур вокруг модального окна */
 }
